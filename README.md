@@ -7,3 +7,12 @@ Spring replaced it with Spring Cloud LoadBalancer, a lightweight, actively maint
 
 --> Ribbon used static server configuration, whereas Spring Cloud LoadBalancer relies on dynamic service discovery via Eureka, eliminating the need for manual server configuration.
 --
+In One Line
+
+RabbitMQ moves data between services
+Zipkin shows how data moved
+
+Interview Ready Answer
+
+RabbitMQ is a message broker used for asynchronous communication between microservices, ensuring reliability and decoupling. Zipkin is a distributed tracing system used to monitor and visualize the flow of a request across multiple services to identify latency and failures.
+--
