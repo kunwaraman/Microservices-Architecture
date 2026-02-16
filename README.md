@@ -16,3 +16,20 @@ Interview Ready Answer
 
 RabbitMQ is a message broker used for asynchronous communication between microservices, ensuring reliability and decoupling. Zipkin is a distributed tracing system used to monitor and visualize the flow of a request across multiple services to identify latency and failures.
 --
+
+Microservices Flow
+--
+Client (Mobile/Web)
+↓
+API Gateway
+↓
+Microservices (User, Order, Product, Payment...)
+↓
+They communicate using:
+Feign + Eureka + Kafka + Redis
+↓
+Everything monitored by:
+Zipkin + Admin Server
+↓
+Configured by:
+Config Server
