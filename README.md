@@ -20,16 +20,22 @@ RabbitMQ is a message broker used for asynchronous communication between microse
 Microservices Flow
 --
 Client (Mobile/Web)
+-
 ↓
 API Gateway
+-
 ↓
 Microservices (User, Order, Product, Payment...)
+-
 ↓
 They communicate using:
 Feign + Eureka + Kafka + Redis
+-
 ↓
 Everything monitored by:
 Zipkin + Admin Server
+-
 ↓
 Configured by:
 Config Server
+-
