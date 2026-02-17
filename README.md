@@ -72,7 +72,20 @@ Config Server
 13.Config server provides configs
 
 
+🧠 MEMORY TRICK (INTERVIEW GOLD)
+-
 
+Remember like a city:
+
+Component	                        City Analogy
+API Gateway	                     City Main Gate
+Eureka	                         Phone Directory
+Feign	                           Personal Assistant
+Kafka	                           Public Announcement
+Redis	                           Fast Counter
+Config Server	                   Government Rules Office
+Zipkin	                         GPS Tracking
+Admin Server	                   CCTV Control Room
 
 
 
