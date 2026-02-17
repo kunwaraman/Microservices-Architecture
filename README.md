@@ -100,7 +100,75 @@ REDIS → caching
 ZIPKIN → tracing
 ADMIN → monitoring
 
+💬 INTERVIEW QUESTIONS (MOST ASKED)
+❓ What problem does Eureka solve?
 
+Answer:
+In distributed systems, service instances dynamically scale and their IP/port changes frequently.
+Eureka provides service discovery so services can locate each other without hardcoding URLs.
+
+❓ Difference: Feign vs RestTemplate
+-
+Feign	RestTemplate
+-
+Declarative	Manual coding
+-
+Integrated with Eureka	Need full URL
+-
+Clean & readable	Boilerplate
+-
+Recommended	Deprecated
+-
+❓ Why Kafka instead of REST calls?
+
+Answer:
+REST is synchronous → increases latency & tight coupling
+Kafka is asynchronous → improves performance & fault tolerance
+
+Example:
+Order shouldn’t wait for email service.
+
+❓ Why API Gateway?
+
+Answer:
+Provides single entry point for clients and handles:
+
+authentication
+
+routing
+
+rate limiting
+
+logging
+
+security
+
+Prevents clients from calling multiple services directly.
+
+❓ Why Redis?
+
+Answer:
+To reduce database load and improve response time by caching frequently accessed data in memory.
+
+❓ What is Distributed Tracing?
+
+Answer:
+Tracking a request across multiple microservices using a traceId.
+Zipkin helps identify latency and failures in the request chain.
+
+❓ Config Server benefit?
+
+Answer:
+Centralized configuration management allowing runtime changes without redeploying services.
+
+❓ Admin Server purpose?
+
+Answer:
+Monitoring microservices health, memory usage, threads, endpoints and status in a single dashboard.
+
+🔥 HOW TO EXPLAIN IN INTERVIEW (2 MIN MASTER ANSWER)
+
+“In our microservice architecture we use API Gateway as a single entry point. Services register themselves to Eureka for service discovery. Inter-service communication is done using OpenFeign clients. Configurations are externalized using Spring Cloud Config Server. We use Redis for caching frequently accessed data and Kafka for asynchronous event-driven communication like order processing and notifications. For observability we use Zipkin for distributed tracing and Spring Boot Admin for monitoring service health and metrics.”
 
 
 
