@@ -33,6 +33,57 @@ Feign + Eureka + Kafka + Redis
 -
 ↓
 Everything monitored by:
+-
+
+🔥 COMPLETE REQUEST FLOW (REAL ECOMMERCE ORDER)
+-
+
+1.User clicks Place Order
+
+2.Client → API Gateway
+
+3.Gateway authenticates
+
+4.Gateway → Order Service (via Eureka)
+
+5.Order → Product Service (Feign + Eureka)
+
+6.Order → Payment Service (Feign + Eureka)
+
+7.Payment success → Order publishes Kafka event
+
+8.Inventory listens → reduces stock
+
+9.Notification listens → sends email
+
+10.Redis caches order data
+
+11.Zipkin tracks entire request
+
+12.Admin server monitors health
+
+13.Config server provides configs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Zipkin + Admin Server
 -
 ↓
