@@ -35,6 +35,13 @@ Feign + Eureka + Kafka + Redis
 Everything monitored by:
 -
 
+Zipkin + Admin Server
+-
+↓
+Configured by:
+Config Server
+-
+
 🔥 COMPLETE REQUEST FLOW (REAL ECOMMERCE ORDER)
 -
 
@@ -84,9 +91,4 @@ Everything monitored by:
 
 
 
-Zipkin + Admin Server
--
-↓
-Configured by:
-Config Server
--
+
