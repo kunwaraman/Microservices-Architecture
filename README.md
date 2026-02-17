@@ -72,20 +72,33 @@ Config Server
 13.Config server provides configs
 
 
-🧠 MEMORY TRICK (INTERVIEW GOLD)
+🧠 COMPLETE MICROSERVICE ARCHITECTURE (E-commerce)
 -
 
-Remember like a city:
+Imagine user clicks “Place Order”
+-
+        📱 Client (Mobile/Web)
+                │
+                ▼
+        🌐 API GATEWAY
+                │
+        ┌───────┼────────────────────────────┐
+        ▼       ▼            ▼                ▼
+   USER-SVC  PRODUCT-SVC  ORDER-SVC     PAYMENT-SVC
+                                  │
+                                  ▼
+                                KAFKA
+                 ┌───────────────┼────────────────┐
+                 ▼               ▼                ▼
+          INVENTORY-SVC   EMAIL-SVC       ANALYTICS-SVC
 
-Component	                        City Analogy
-API Gateway	                     City Main Gate
-Eureka	                         Phone Directory
-Feign	                           Personal Assistant
-Kafka	                           Public Announcement
-Redis	                           Fast Counter
-Config Server	                   Government Rules Office
-Zipkin	                         GPS Tracking
-Admin Server	                   CCTV Control Room
+Support Systems:
+-------------------------------------------------------
+EUREKA → service discovery
+CONFIG → configuration
+REDIS → caching
+ZIPKIN → tracing
+ADMIN → monitoring
 
 
 
